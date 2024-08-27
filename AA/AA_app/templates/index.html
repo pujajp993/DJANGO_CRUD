@@ -1,0 +1,30 @@
+
+{% include 'messages.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+
+        <form  method="post" action="index">
+           
+            Registration
+            {% csrf_token %}
+            <input type="text" name="name" class="form-control" required placeholder="Enter Name" maxlength="50" />
+            <input type="text" name="lname" class="form-control" required placeholder="Enter lastname" maxlength="50" />
+            <input type="text" name="uname" class="form-control" required placeholder="Enter username" maxlength="50" />
+            <input type="text" name="pwd" class="form-control" required placeholder="Enter Password" maxlength="50" />
+            <input type="text" name="phno" class="form-control" required placeholder="Enter phno" maxlength="50" />
+            <input type="date" name="dob" class="form-control" required placeholder="Enter Dob" maxlength="50" />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

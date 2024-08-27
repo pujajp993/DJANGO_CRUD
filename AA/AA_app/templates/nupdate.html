@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/nupdate/{{em.id}}" method="POST">
+        {% csrf_token %}
+        Name:<input type="text" value="{{em.first_name}}" name="nm"><br><br>
+        DOB:<input type="text" value="{{em.DOB}}" name="ag"><br><br>
+       
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
